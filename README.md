@@ -28,7 +28,7 @@ The Mongolian text-to-speech uses 5 hours audio from the [Mongolian Bible](https
    * The WAV files are saved in the `samples` folder.
 
 ## FINETUNE Mongolian Text-To-Speech on your CUSTOM dataset
-Prepare audio files as stated below and 
+
 1. First, prepare your dataset like below:
 ```
 | -- datasets/
@@ -45,12 +45,7 @@ filename|ямар нэг текст|ямар нэг текст
 Now prepare the dataset: `python dl_and_preprop_dataset.py --dataset=custom_dataset`
 2. Download pretrained model: 
 ```
-mkdir logdir/
-
-mkdir logdir/mbspeech-text2mel/
 wget -q -O logdir/mbspeech-text2mel/mbspeech-text2mel.pth https://www.dropbox.com/s/wu26k6tu5hz8hq1/step-200K.pth
-
-mkdir logdir/mbspeech-ssrn/
 wget -q -O logdir/mbspeech-ssrn/mbspeech-ssrn.pth https://www.dropbox.com/s/tel0xcqa7kkwqze/step-165K.pth
 ```
 3. Train the Text2Mel model: `python train-text2mel.py --dataset=mbspeech`
