@@ -34,14 +34,15 @@ class HParams:
 
     # Text2Mel network options
     text2mel_lr = 0.005  # learning rate
-    text2mel_max_iteration = 300000  # max train step
+    # text2mel_max_iteration = 300000  # max train step
+    text2mel_max_iteration = 15000  # max train step
     text2mel_weight_init = 'none'  # 'kaiming', 'xavier' or 'none'
     text2mel_normalization = 'layer'  # 'layer', 'weight' or 'none'
     text2mel_basic_block = 'gated_conv'  # 'highway', 'gated_conv' or 'residual'
 
     # SSRN network options
     ssrn_lr = 0.0005  # learning rate
-    ssrn_max_iteration = 150000  # max train step
+    ssrn_max_iteration = 5000  # max train step
     ssrn_weight_init = 'kaiming'  # 'kaiming', 'xavier' or 'none'
     ssrn_normalization = 'weight'  # 'layer', 'weight' or 'none'
     ssrn_basic_block = 'residual'  # 'highway', 'gated_conv' or 'residual'

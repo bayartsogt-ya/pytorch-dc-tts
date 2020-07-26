@@ -160,3 +160,13 @@ elif args.dataset == 'mbspeech':
     print("pre processing...")
     mb_speech = MBSpeech([])
     preprocess(dataset_path, mb_speech)
+
+elif args.dataset == 'custom_dataset':
+    dataset_name = 'MBSpeech-1.0'
+    datasets_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'datasets')
+    dataset_path = os.path.join(datasets_path, dataset_name)
+
+    # pre process
+    print("pre processing...")
+    mb_speech = MBSpeech([])
+    preprocess(dataset_path, mb_speech)
