@@ -43,6 +43,7 @@ In this case your metadata.csv looks like this (`|` separated file):
 filename|ямар нэг текст|ямар нэг текст
 ```
 Now prepare the dataset: `python dl_and_preprop_dataset.py --dataset=custom_dataset`
+
 2. Download pretrained model: 
 ```
 wget -q -O logdir/mbspeech-text2mel/mbspeech-text2mel.pth https://www.dropbox.com/s/wu26k6tu5hz8hq1/step-200K.pth
